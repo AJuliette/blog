@@ -57,6 +57,8 @@ const Header = () => {
             </span>
           </a>
         </Link>
+      </nav>
+      <span className={styles.rightElems}>
         <span
           tabIndex={0}
           role="button"
@@ -64,19 +66,18 @@ const Header = () => {
           aria-label="light"
           onClick={generateHandleClick(actOnLightButton)}
           onKeyDown={generateHandleKeypress(actOnLightButton)}
-        />
-      </nav>
-      <span className={styles.rightElems}>
-        <span className={[styles.circle, styles.yellow].join(' ')}>
-          {isDark ? (
-            <FaSun
-              className={classCompactor([styles.icon, 'svg-inline--fa'])}
-            />
-          ) : (
-            <FaMoon
-              className={classCompactor([styles.icon, 'svg-inline--fa'])}
-            />
-          )}
+        >
+          <span className={[styles.circle, styles.yellow].join(' ')}>
+            {isDark ? (
+              <FaSun
+                className={classCompactor([styles.icon, 'svg-inline--fa'])}
+              />
+            ) : (
+              <FaMoon
+                className={classCompactor([styles.icon, 'svg-inline--fa'])}
+              />
+            )}
+          </span>
         </span>
         <span
           tabIndex={0}
