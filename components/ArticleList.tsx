@@ -4,12 +4,16 @@ import LayoutContext from '../contexts/LayoutContext';
 import useWatchFont from '../hooks/useWatchFont';
 
 import styles from './ArticleList.module.scss';
-import { DateTag, TitleTag } from './Tag';
 
 const ArticleList = ({
   articles,
 }: {
-  articles: Array<{ title: string; date: string; slug: string }>;
+  articles: Array<{
+    title: string;
+    date: string;
+    slug: string;
+    description: string;
+  }>;
 }) => {
   const { isProfileOpen } = useContext(LayoutContext);
   const isInconsolataLoaded = useWatchFont('Inconsolata');
@@ -17,21 +21,15 @@ const ArticleList = ({
   const inconsolataLoadedClass = isInconsolataLoaded
     ? 'inconsolata-loaded'
     : '';
-  const profileOpenClass = isProfileOpen ? 'profile-open' : '';
   return (
     <ul className={styles.titleList}>
       {articles.map((article) => (
-        <li key={article.slug}>
+        <li className={styles.blockList} key={article.slug}>
           <Link href={`/${article.slug}`}>
-            <a
-              className={[
-                styles.titleItem,
-                profileOpenClass,
-                inconsolataLoadedClass,
-              ].join(' ')}
-            >
-              <DateTag>{article.date}</DateTag>
-              <TitleTag>{article.title}</TitleTag>
+            <a className={inconsolataLoadedClass}>
+              <h2 className={styles.titleItem}>{article.title}</h2>
+              <p>{article.description}</p>
+              <p>{article.date}</p>
             </a>
           </Link>
         </li>

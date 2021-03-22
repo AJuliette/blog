@@ -24,7 +24,6 @@ const FileName = ({
 }: FileType) => {
   const { isProfileOpen } = useContext(LayoutContext);
   const { wideCodeBlock } = useContext(PreferencesContext);
-  const profileOpenClass = isProfileOpen ? 'profile-open' : '';
   const wideCodeBlockClass = wideCodeBlock ? 'wide-code-block' : '';
 
   if (blogGithub) {
@@ -34,11 +33,7 @@ const FileName = ({
     ) || [null, null, null, null];
     return (
       <a
-        className={classCompactor([
-          styles.fileName,
-          profileOpenClass,
-          wideCodeBlockClass,
-        ])}
+        className={classCompactor([styles.fileName, wideCodeBlockClass])}
         href={`https://github.com/zaratan/zarablog-next/blob/main/${filename}${
           startLine ? `#L${startLine}${endLine ? `-L${endLine}` : ''}` : ''
         }`}
@@ -55,11 +50,7 @@ const FileName = ({
     ) || [null, null, null, null];
     return (
       <a
-        className={classCompactor([
-          styles.fileName,
-          profileOpenClass,
-          wideCodeBlockClass,
-        ])}
+        className={classCompactor([styles.fileName, wideCodeBlockClass])}
         href={`${baseUrl}${filename}${
           startLine ? `#L${startLine}${endLine ? `-L${endLine}` : ''}` : ''
         }`}
@@ -70,13 +61,7 @@ const FileName = ({
     );
   }
   return (
-    <span
-      className={classCompactor([
-        styles.fileName,
-        profileOpenClass,
-        wideCodeBlockClass,
-      ])}
-    >
+    <span className={classCompactor([styles.fileName, wideCodeBlockClass])}>
       {filename}
       {line ? `:${line}` : ''}
     </span>

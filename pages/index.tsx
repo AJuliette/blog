@@ -8,6 +8,7 @@ import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import Layout from '../components/Layout';
 import ArticleList from '../components/ArticleList';
+import Welcome from '../components/Welcome';
 
 export const getStaticProps: GetStaticProps = async () => {
   const postsDirectory = path.join(process.cwd(), 'articles');
@@ -17,6 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
     date: Date;
     title: string;
     slug: string;
+    description: string;
   }> = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -25,6 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
       date: new Date(data.date),
       title: data.title,
       slug: filename.replace(/.mdx$/, ''),
+      description: data.description,
     };
   });
 
@@ -33,10 +36,9 @@ export const getStaticProps: GetStaticProps = async () => {
     (article) => -article.date.getTime()
   ).map((art) => ({
     slug: art.slug,
-    date: format(art.date, 'd MMM yyyy', {
-      locale: fr,
-    }),
+    date: format(art.date, 'MMM d yyyy'),
     title: art.title,
+    description: art.description,
   }));
 
   return {
@@ -46,14 +48,18 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const description =
-  'Blog personnel de Zaratan. Ce site me sert a poster mes opinions quand à la tech en général';
-const title = 'Zaratan@next';
+const description = 'Blog de Juliette Audema';
+const title = 'AJuliette';
 
 export default function Home({
   articles,
 }: {
-  articles: Array<{ title: string; date: string; slug: string }>;
+  articles: Array<{
+    title: string;
+    date: string;
+    slug: string;
+    description: string;
+  }>;
 }) {
   return (
     <>
@@ -67,6 +73,7 @@ export default function Home({
         <meta name="twitter:description" content={description} />
       </Head>
       <Layout>
+        <Welcome />
         <ArticleList articles={articles} />
       </Layout>
     </>

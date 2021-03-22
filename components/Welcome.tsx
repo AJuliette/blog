@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaTwitter, FaMugHot } from 'react-icons/fa';
 import Image from 'next/image';
 
 import { ImTextWidth } from 'react-icons/im';
-import styles from './Profile.module.scss';
+import styles from './Welcome.module.scss';
 import PreferencesContext from '../contexts/PreferencesContext';
 import Slider from './Slider';
 import { useScroll } from '../hooks/useScroll';
@@ -12,26 +12,21 @@ import { headerVisisble } from './Header';
 
 const ImgProfilePic = () => (
   <div className={styles.pictureContainer}>
-    <Image src="/profile.jpg" width="200" height="200" />
+    <Image src="/profile.jpeg" width="200" height="200" />
   </div>
 );
 
-const Profile = () => {
+const Welcome = () => {
   const { wideCodeBlock, toggleWideCodeBlocks } = useContext(
     PreferencesContext
   );
   const { atTopScroll, scrollingUp } = useScroll();
 
   return (
-    <div
-      className={classCompactor([
-        styles.profileContainer,
-        headerVisisble(atTopScroll, scrollingUp) ? styles.headerVisible : '',
-      ])}
-    >
+    <div>
       <ImgProfilePic />
       <header>
-        <h1>Zaratan</h1>
+        <h1>Welcome !</h1>
         <h3>Les élucubrations d'un développeur fatigué</h3>
         <p>
           Développeur, ludiste, admin sys, grimpeur et cuisinier à mes heures.
@@ -110,4 +105,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Welcome;

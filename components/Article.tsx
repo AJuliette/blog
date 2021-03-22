@@ -19,18 +19,17 @@ const Article = ({
 }) => {
   const { isProfileOpen } = useContext(LayoutContext);
   const { wideCodeBlock } = useContext(PreferencesContext);
-  const profileOpenClass = isProfileOpen ? 'profile-open' : '';
   const wideCodeBlockClass = wideCodeBlock ? 'wide-code-block' : '';
   return (
     <>
       <header className={styles.articleHeader}>
         <h1 className={styles.title}>{title}</h1>
-        <section className={[styles.articleInfos, profileOpenClass].join(' ')}>
-          <em className={[styles.articleInfo, profileOpenClass].join(' ')}>
+        <section className={styles.articleInfos}>
+          <em className={styles.articleInfo}>
             Temps de lecture:{' '}
             <span className={styles.highlight}>{timeToRead} minutes</span>
           </em>
-          <em className={[styles.articleInfo, profileOpenClass].join(' ')}>
+          <em className={styles.articleInfo}>
             Il y a:{' '}
             <span className={styles.highlight}>
               {formatDistanceToNow(new Date(date), { locale: fr })}
@@ -41,7 +40,6 @@ const Article = ({
       <article
         className={classCompactor([
           styles.articleContainer,
-          profileOpenClass,
           wideCodeBlockClass,
           'line-numbers',
         ])}

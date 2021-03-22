@@ -1,7 +1,20 @@
 @import "../styles/theme";
 
 .titleList {
-  margin: 50px 20px 20px 20px;
+  h2, p {
+    margin: 0;
+  }
+}
+
+.blockList {
+  padding: 10px 0;
+
+  border-radius: 5px;
+  &:hover {
+    @include themed {
+      background-color: t("base03");
+    }
+  }
 }
 
 .titleItem {
@@ -12,7 +25,6 @@
     color: t("base1");
   }
   &:hover {
-    padding-left: 20px;
     @include themed {
       color: t("base1");
     }
@@ -36,11 +48,6 @@
     letter-spacing: 0;
   }
 
-  &:global(.profile-open) {
-    @media only screen and (max-width: 1310px) {
-      flex-direction: column;
-    }
-  }
   &:not(:global(.profile-open)) {
     @media only screen and (max-width: 910px) {
       flex-direction: column;

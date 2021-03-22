@@ -83,30 +83,7 @@ const Header = () => {
             )}
           </span>
         </span>
-        <span
-          tabIndex={0}
-          role="button"
-          className={styles.circleLink}
-          aria-label="profile"
-          onClick={generateHandleClick(actOnProfileButton)}
-          onKeyDown={generateHandleKeypress(actOnProfileButton)}
-        >
-          <span className={classCompactor([styles.circle, styles.green])}>
-            <FaUser
-              className={classCompactor([
-                styles.icon,
-                'svg-inline--fa',
-                'fa-w-14',
-              ])}
-            />
-          </span>
-        </span>
       </nav>
-      <h1 className={styles.siteTitle}>
-        <Link href="/">
-          <a>Zaratan@next</a>
-        </Link>
-      </h1>
       <span className={styles.rightElems}>
         <span
           tabIndex={0}
