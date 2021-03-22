@@ -5,22 +5,19 @@
 .pictureContainer {
   border-radius: 50%;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
-  min-height: 200px;
-  margin: 0 auto 1.5rem auto;
+  height: 180px;
+  min-height: 150px;
+  min-width: 180px;
+  margin: 0 auto 1.5rem;
 }
 
 .profileContainer {
   display: flex;
-  flex-direction: column;
   padding: 30px 10px 4rem 10px;
-  height: 100%;
-  font-family: Inconsolata;
-  position: fixed;
-  overflow-y: scroll;
-  transition: padding-top 0.3s ease-in-out;
-  padding-top: 0px;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
 
 .headerVisible {
@@ -28,4 +25,18 @@
   @media only screen and (max-width: 500px) {
     padding-top: 30px;
   }
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header {
+  margin-left: 50px;
 }
