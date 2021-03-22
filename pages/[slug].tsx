@@ -81,13 +81,16 @@ const Article = ({ article }: { article: { mdx: any; data: any } }) => {
   const content = hydrate(article.mdx, {
     components,
   });
-  const title = `Zaratan@next: ${article.data.title}`;
+  const title = `AJuliette: ${article.data.title}`;
   const { description } = article.data;
   return (
     <>
       <Head>
-        <title>Zaratan@next: {article.data.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>AJuliette: {article.data.title}</title>
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
+        />
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

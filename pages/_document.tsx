@@ -25,7 +25,6 @@ class MyDocument extends Document {
           />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:creator" content="@zaratan" />
         </Head>
         <body>
           <Main />
