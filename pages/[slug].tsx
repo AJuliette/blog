@@ -83,7 +83,6 @@ const Article = ({ article }: { article: { mdx: any; data: any } }) => {
   });
   const title = `Zaratan@next: ${article.data.title}`;
   const { description } = article.data;
-  const { emoji } = article.emoji;
   return (
     <>
       <Head>

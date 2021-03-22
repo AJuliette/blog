@@ -1,7 +1,6 @@
 import React, { ReactNode, useContext } from 'react';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import { fr } from 'date-fns/locale';
-import LayoutContext from '../contexts/LayoutContext';
 import styles from './Article.module.scss';
 import PreferencesContext from '../contexts/PreferencesContext';
 import classCompactor from '../helpers/classCompator';
@@ -11,13 +10,14 @@ const Article = ({
   timeToRead,
   title,
   date,
+  emoji,
 }: {
   children: ReactNode;
   timeToRead: number;
   title: string;
   date: Date;
+  emoji: string;
 }) => {
-  const { isProfileOpen } = useContext(LayoutContext);
   const { wideCodeBlock } = useContext(PreferencesContext);
   const wideCodeBlockClass = wideCodeBlock ? 'wide-code-block' : '';
   return (
