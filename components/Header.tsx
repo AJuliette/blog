@@ -70,21 +70,20 @@ const Header = () => {
           aria-label="light"
           onClick={generateHandleClick(actOnLightButton)}
           onKeyDown={generateHandleKeypress(actOnLightButton)}
-        >
-          <span className={[styles.circle, styles.yellow].join(' ')}>
-            {isDark ? (
-              <FaSun
-                className={classCompactor([styles.icon, 'svg-inline--fa'])}
-              />
-            ) : (
-              <FaMoon
-                className={classCompactor([styles.icon, 'svg-inline--fa'])}
-              />
-            )}
-          </span>
-        </span>
+        />
       </nav>
       <span className={styles.rightElems}>
+        <span className={[styles.circle, styles.yellow].join(' ')}>
+          {isDark ? (
+            <FaSun
+              className={classCompactor([styles.icon, 'svg-inline--fa'])}
+            />
+          ) : (
+            <FaMoon
+              className={classCompactor([styles.icon, 'svg-inline--fa'])}
+            />
+          )}
+        </span>
         <span
           tabIndex={0}
           role="button"
