@@ -100,6 +100,7 @@ const Article = ({ article }: { article: { mdx: any; data: any } }) => {
             title={article.data.title}
             timeToRead={article.data.readingTime}
             date={article.data.date}
+            emoji={article.data.emoji}
           >
             {content}
           </ArticleContainer>
