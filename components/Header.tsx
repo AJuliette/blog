@@ -4,7 +4,6 @@ import { isBrowser } from 'react-device-detect';
 import { FaSun, FaMoon, FaUser, FaHome } from 'react-icons/fa';
 import { ImTextWidth } from 'react-icons/im';
 import ThemeContext from '../contexts/ThemeContext';
-import LayoutContext from '../contexts/LayoutContext';
 import { useScroll } from '../hooks/useScroll';
 import {
   generateHandleClick,
@@ -20,16 +19,11 @@ export const headerVisisble = (atTopScroll, scrollingUp) =>
 
 const Header = () => {
   const { isDark, toggleDark } = useContext(ThemeContext);
-  const { toggleProfileOpen, closeProfile } = useContext(LayoutContext);
   const { toggleWideCodeBlocks, wideCodeBlock } = useContext(
     PreferencesContext
   );
   const actOnLightButton = () => {
     toggleDark();
-  };
-
-  const actOnProfileButton = () => {
-    toggleProfileOpen();
   };
 
   const actOnHomeButton = () => {
