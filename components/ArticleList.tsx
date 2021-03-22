@@ -13,6 +13,7 @@ const ArticleList = ({
     date: string;
     slug: string;
     description: string;
+    emoji: string;
   }>;
 }) => {
   const isRubikLoaded = useWatchFont('Rubik');
@@ -24,9 +25,14 @@ const ArticleList = ({
         <li className={styles.blockList} key={article.slug}>
           <Link href={`/${article.slug}`}>
             <a className={rubikLoadedClass}>
-              <h2 className={styles.titleItem}>{article.title}</h2>
-              <p>{article.description}</p>
-              <p>{article.date}</p>
+              <div className={styles.mediaObject}>
+                <div className={styles.emoji}>{article.emoji}</div>
+                <div>
+                  <h2 className={styles.titleItem}>{article.title}</h2>
+                  <p>{article.description}</p>
+                  <p className={styles.dateItem}>{article.date}</p>
+                </div>
+              </div>
             </a>
           </Link>
         </li>

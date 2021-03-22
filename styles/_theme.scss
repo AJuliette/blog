@@ -12,7 +12,7 @@ $themes: (
   "light": (
     base1: #555555,
     base0: #8685EF,
-    base2: #FFDCC7,
+    base2: #FEE5B4,
     base3: #FFFFFF,
     base03: #002b36,
     base02: #859CA2,
@@ -24,11 +24,13 @@ $themes: (
 $yellow: #b58900;
 $orange: #cb4b16;
 $red: #dc322f;
-$magenta: #d33682;
+$magenta: #C97F71;
 $violet: #8685EF;
 $blue: #268bd2;
 $cyan: #2aa198;
 $green: #00C896;
+$pink: #D5B7EE;
+$black: #181818;
 
 @mixin themed() {
   @each $theme, $map in $themes {

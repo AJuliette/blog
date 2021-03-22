@@ -7,14 +7,29 @@
 }
 
 .blockList {
-  padding: 10px 0;
-
+  padding: 10px;
   border-radius: 5px;
-  &:hover {
+
+  a {
     @include themed {
-      background-color: t("base03");
+      color: t("base1");
     }
   }
+
+  &:hover {
+    @include themed {
+      background-color: t("base2");
+    }
+  }
+}
+
+.mediaObject {
+  display: flex;
+  align-items: flex-start;
+}
+
+.dateItem {
+  font-style: italic;
 }
 
 .titleItem {
@@ -53,4 +68,10 @@
       flex-direction: column;
     }
   }
+}
+
+.emoji {
+  margin: auto 16px auto 0;
+  padding: 0px 16px;
+  font-size: 35px;
 }

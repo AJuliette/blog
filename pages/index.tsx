@@ -19,6 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
     title: string;
     slug: string;
     description: string;
+    emoji: string;
   }> = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -28,6 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title: data.title,
       slug: filename.replace(/.mdx$/, ''),
       description: data.description,
+      emoji: data.emoji,
     };
   });
 
@@ -39,6 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
     date: format(art.date, 'MMM d yyyy'),
     title: art.title,
     description: art.description,
+    emoji: art.emoji,
   }));
 
   return {
@@ -59,6 +62,7 @@ export default function Home({
     date: string;
     slug: string;
     description: string;
+    emoji: string;
   }>;
 }) {
   return (
