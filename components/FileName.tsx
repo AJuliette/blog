@@ -1,6 +1,5 @@
 import { setMaxListeners } from 'process';
 import React, { useContext } from 'react';
-import LayoutContext from '../contexts/LayoutContext';
 import PreferencesContext from '../contexts/PreferencesContext';
 import classCompactor from '../helpers/classCompator';
 import styles from './FileName.module.scss';
@@ -22,7 +21,6 @@ const FileName = ({
   external,
   baseUrl,
 }: FileType) => {
-  const { isProfileOpen } = useContext(LayoutContext);
   const { wideCodeBlock } = useContext(PreferencesContext);
   const wideCodeBlockClass = wideCodeBlock ? 'wide-code-block' : '';
 

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React, { useContext } from 'react';
-import LayoutContext from '../contexts/LayoutContext';
 import useWatchFont from '../hooks/useWatchFont';
 
 import styles from './ArticleList.module.scss';

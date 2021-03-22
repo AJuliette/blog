@@ -5,8 +5,6 @@ import { useContext, useEffect } from 'react';
 import GoogleFonts from 'next-google-fonts';
 
 import ThemeContext, { ThemeContextProvider } from '../contexts/ThemeContext';
-import { LayoutProvider } from '../contexts/LayoutContext';
-
 import '../styles/GlobalStyle.scss';
 import '../styles/Code.scss';
 import { PreferencesProvider } from '../contexts/PreferencesContext';
@@ -34,11 +32,9 @@ function MyApp(appProps: AppProps) {
         />
       </Head>
       <ThemeContextProvider>
-        <LayoutProvider>
-          <PreferencesProvider>
-            <WrappedApp {...appProps} />
-          </PreferencesProvider>
-        </LayoutProvider>
+        <PreferencesProvider>
+          <WrappedApp {...appProps} />
+        </PreferencesProvider>
       </ThemeContextProvider>
     </>
   );
