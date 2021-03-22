@@ -26,11 +26,6 @@ const Header = () => {
     toggleDark();
   };
 
-  const actOnHomeButton = () => {
-    if (isBrowser) return;
-    closeProfile();
-  };
-
   const { scrollingUp, atTopScroll } = useScroll();
 
   return (
