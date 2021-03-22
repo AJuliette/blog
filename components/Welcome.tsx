@@ -7,8 +7,6 @@ import styles from './Welcome.module.scss';
 import PreferencesContext from '../contexts/PreferencesContext';
 import Slider from './Slider';
 import { useScroll } from '../hooks/useScroll';
-import classCompactor from '../helpers/classCompator';
-import { headerVisisble } from './Header';
 
 const ImgProfilePic = () => (
   <div className={styles.pictureContainer}>

@@ -15,18 +15,15 @@ const ArticleList = ({
     description: string;
   }>;
 }) => {
-  const { isProfileOpen } = useContext(LayoutContext);
-  const isInconsolataLoaded = useWatchFont('Inconsolata');
+  const isRubikLoaded = useWatchFont('Rubik');
 
-  const inconsolataLoadedClass = isInconsolataLoaded
-    ? 'inconsolata-loaded'
-    : '';
+  const rubikLoadedClass = isRubikLoaded ? 'rubik-loaded' : '';
   return (
     <ul className={styles.titleList}>
       {articles.map((article) => (
         <li className={styles.blockList} key={article.slug}>
           <Link href={`/${article.slug}`}>
-            <a className={inconsolataLoadedClass}>
+            <a className={rubikLoadedClass}>
               <h2 className={styles.titleItem}>{article.title}</h2>
               <p>{article.description}</p>
               <p>{article.date}</p>

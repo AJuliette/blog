@@ -146,9 +146,6 @@
 
 .headerStyle {
   height: 40px;
-  @include themed {
-    background-color: t("base2");
-  }
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 500px) {

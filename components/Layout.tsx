@@ -19,9 +19,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           {children}
         </main>
       </div>
-      <footer className={styles.footer}>
-        Juliette Audema © {new Date().getFullYear()}
-      </footer>
     </>
   );
 };

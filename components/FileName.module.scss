@@ -1,9 +1,9 @@
 @import "../styles/theme";
 
 .fileName {
-  color: $orange;
+  color: $violet;
   @include themed {
-    background-color: t("base2");
+    background-color: t("base00");
   }
   padding: 0.4rem 1rem;
   font-style: italic;

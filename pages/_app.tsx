@@ -26,7 +26,7 @@ const WrappedApp = ({ Component, pageProps }: AppProps) => {
 function MyApp(appProps: AppProps) {
   return (
     <>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" />
       <Head>
         <meta
           name="viewport"

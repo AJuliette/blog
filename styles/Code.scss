@@ -3,10 +3,10 @@
 tt,
 code {
   @include gthemed {
-    background-color: t("base2"); /* base3 */
+    background-color: t("base01"); /* base3 */
   }
   border-radius: 3px;
-  font-family: Inconsolata, Consolas, "Roboto Mono", "Droid Sans Mono",
+  font-family: Rubik, Consolas, sans-serif,
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
@@ -32,7 +32,7 @@ pre tt:after {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  font-family: Inconsolata, Consolas, Monaco, monospace;
+  font-family: Rubik, sans-serif;
   font-size: 1em;
   text-align: left;
   white-space: pre;
@@ -64,7 +64,7 @@ code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
   @include gthemed {
     background: t("base02"); /* base02 */
-    color: t("base2");
+    color: t("base01");
   }
 }
 
@@ -74,14 +74,14 @@ code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   @include gthemed {
     background: t("base02"); /* base02 */
-    color: t("base2");
+    color: t("base01");
   }
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   @include gthemed {
-    background-color: t("base2"); /* base3 */
+    background-color: t("base01"); /* base3 */
   }
 }
 
@@ -150,7 +150,7 @@ pre[class*="language-"] {
   cursor: help;
   @include gthemed {
     color: t("base0"); /* base00 */
-    background: t("base2"); /* base2 */
+    background: t("base01"); /* base01 */
   }
 }
 
