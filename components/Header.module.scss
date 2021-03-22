@@ -90,15 +90,11 @@
 }
 
 .red {
-  background-color: $red;
+  background-color: $violet;
 }
 
 .yellow {
   background-color: $yellow;
-}
-
-.green {
-  background-color: $green;
 }
 
 .circleContainer {
@@ -116,7 +112,7 @@
 .rightElems {
   width: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   @media only screen and (max-width: 500px) {
     display: none;
