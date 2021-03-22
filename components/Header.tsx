@@ -40,8 +40,6 @@ const Header = () => {
           <a
             className={styles.circleLink}
             aria-label="home"
-            onClick={generateHandleClick(actOnHomeButton)}
-            onKeyDown={generateHandleKeypress(actOnHomeButton)}
             role="button"
             tabIndex={0}
           >
