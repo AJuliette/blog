@@ -39,4 +39,8 @@
 
 .header {
   margin-left: 50px;
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 20px;
+  }
 }

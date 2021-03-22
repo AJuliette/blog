@@ -50,8 +50,6 @@ const Header = () => {
             </span>
           </a>
         </Link>
-      </nav>
-      <span className={styles.rightElems}>
         <span
           tabIndex={0}
           role="button"
@@ -72,6 +70,8 @@ const Header = () => {
             )}
           </span>
         </span>
+      </nav>
+      <span className={styles.rightElems}>
         <span
           tabIndex={0}
           role="button"
