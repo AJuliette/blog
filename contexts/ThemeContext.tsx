@@ -10,12 +10,12 @@ const defaultContext: ContextType = {
   toggleDark: () => {
     console.warn('Should have been overriden');
   },
-  isDark: true,
+  isDark: false,
 };
 
 const ThemeContext = createContext(defaultContext);
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const lsDark = JSON.parse(localStorage.getItem('ThemeContext:isDark'));
