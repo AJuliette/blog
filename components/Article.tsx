@@ -23,16 +23,20 @@ const Article = ({
   return (
     <>
       <header className={styles.articleHeader}>
+        <div className={styles.cell}>
+          <div className={styles.text}>{emoji}</div>
+          <div className={styles.blur}>{emoji}</div>
+        </div>
         <h1 className={styles.title}>{title}</h1>
         <section className={styles.articleInfos}>
           <em className={styles.articleInfo}>
-            Temps de lecture:{' '}
+            Reading time:{' '}
             <span className={styles.highlight}>{timeToRead} minutes</span>
           </em>
           <em className={styles.articleInfo}>
-            Il y a:{' '}
+            Posted:{' '}
             <span className={styles.highlight}>
-              {formatDistanceToNow(new Date(date), { locale: fr })}
+              {formatDistanceToNow(new Date(date))} ago
             </span>
           </em>
         </section>

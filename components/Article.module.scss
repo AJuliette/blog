@@ -142,3 +142,31 @@
 .highlight {
   font-weight: 700;
 }
+
+.cell {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px 0 rgba(#000, 0.1);
+
+  .text {
+    font-size: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .blur {
+    font-size: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(20px) opacity(0.4);
+  }
+}
