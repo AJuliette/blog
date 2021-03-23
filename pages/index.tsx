@@ -20,6 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
     slug: string;
     description: string;
     emoji: string;
+    path: string;
   }> = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -30,8 +31,48 @@ export const getStaticProps: GetStaticProps = async () => {
       slug: filename.replace(/.mdx$/, ''),
       description: data.description,
       emoji: data.emoji,
+      path: '',
     };
   });
+
+  unsortedArticles.push(
+    {
+      date: new Date('2020-11-02'),
+      title: 'Create an open-source project on GitHub, the incremental way',
+      slug: '',
+      path:
+        'https://blog.capsens.eu/create-an-open-source-project-on-github-the-incremental-way-e6106063546e',
+      description: 'My experience on building a project in open-source',
+      emoji: '👷',
+    },
+    {
+      date: new Date('2020-10-02'),
+      title: 'How to contribute to Hacktoberfest and not shitoberfest (🥖)',
+      slug: '',
+      path:
+        'https://blog.capsens.eu/comment-contribuer-%C3%A0-hacktoberfest-et-non-shitoberfest-97cb4a4ea3cd',
+      description:
+        '2020 was the year where open source maintainers revolted against Hacktoberfest',
+      emoji: '👩‍💻',
+    },
+    {
+      date: new Date('2020-05-11'),
+      title: 'How to improve your card style with spacing',
+      slug: '',
+      path:
+        'https://blog.capsens.eu/how-to-improve-your-card-style-with-spacing-93d23d1d06cb',
+      description: "Because it's classy",
+      emoji: '⬜',
+    },
+    {
+      date: new Date('2020-05-10'),
+      title: 'Getting along with CSS',
+      slug: '',
+      path: 'https://blog.capsens.eu/getting-along-with-css-e9855af2759d',
+      description: 'How to get CSS to do what you actually want',
+      emoji: '🎨',
+    }
+  );
 
   const articles = sortBy(
     unsortedArticles,
@@ -42,6 +83,7 @@ export const getStaticProps: GetStaticProps = async () => {
     title: art.title,
     description: art.description,
     emoji: art.emoji,
+    path: art.path,
   }));
 
   return {
