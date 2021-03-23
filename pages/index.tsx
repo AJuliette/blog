@@ -8,6 +8,8 @@ import { format } from 'date-fns';
 import Layout from '../components/Layout';
 import ArticleList from '../components/ArticleList';
 import Welcome from '../components/Welcome';
+import Talking from '../components/Talking';
+import Contact from '../components/Contact';
 
 export const getStaticProps: GetStaticProps = async () => {
   const postsDirectory = path.join(process.cwd(), 'articles');
@@ -124,6 +126,7 @@ export default function Home({
       <Layout>
         <Welcome />
         <ArticleList articles={articles} />
+        <Contact />
       </Layout>
     </>
   );
