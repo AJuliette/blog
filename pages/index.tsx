@@ -105,6 +105,7 @@ export default function Home({
     slug: string;
     description: string;
     emoji: string;
+    path: string;
   }>;
 }) {
   return (
