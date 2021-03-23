@@ -20,8 +20,8 @@ const ArticleList = ({
 
   const rubikLoadedClass = isRubikLoaded ? 'rubik-loaded' : '';
   return (
-    <div className={styles.block}>
-      <p className="highlight">Writing</p>
+    <section className="block">
+      <p className="highlight">Articles</p>
       <ul className={styles.titleList}>
         {articles.map((article) => (
           <li className={styles.blockList} key={article.slug}>
@@ -43,7 +43,7 @@ const ArticleList = ({
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
