@@ -5,7 +5,6 @@ import { GetStaticProps } from 'next';
 import matter from 'gray-matter';
 import { sortBy } from 'lodash';
 import { format } from 'date-fns';
-import { fr } from 'date-fns/locale';
 import Layout from '../components/Layout';
 import ArticleList from '../components/ArticleList';
 import Welcome from '../components/Welcome';
