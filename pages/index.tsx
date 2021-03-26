@@ -126,6 +126,7 @@ export default function Home({
       <Layout>
         <Welcome />
         <ArticleList articles={articles} />
+        <Talking />
         <Contact />
       </Layout>
     </>
