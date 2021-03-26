@@ -39,11 +39,18 @@ const unsortedTalks: Array<{
   {
     date: new Date('2020-10-07'),
     title: 'How to contribute to Hacktoberfest (🥖)',
-    description:
-      'From basic to advanced: test how well you know Ruby and Ruby on Rails',
+    description: 'Write your first contribution to an open-source project !',
     emoji: '✋',
     path:
       'https://drive.google.com/file/u/3/d/1iJoN31iShNRy2vCGuS_FRYZG3NZQFqP4/view?usp=sharing',
+  },
+  {
+    date: new Date('2020-12-03'),
+    title: 'Fireside: You can code (🥖)',
+    description:
+      'A fourty minutes workshop to learn to write your first lines of Ruby code',
+    emoji: 'ℹ️',
+    path: 'https://www.youtube.com/watch?v=8LMKII95RfM',
   },
 ];
 
