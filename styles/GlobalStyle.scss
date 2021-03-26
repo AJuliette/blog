@@ -158,17 +158,23 @@ a {
   &:focus {
     outline: none;
     box-shadow: none;
-    color: $magenta;
+    @include gthemed {
+      color: t("base02");
+    }
   }
 
   &:focus svg {
     outline: none;
     box-shadow: none;
-    color: $magenta;
+    @include gthemed {
+      color: t("base02");
+    }
   }
 
   &:hover {
-    color: $magenta;
+    @include gthemed {
+      color: t("base02");
+    }
   }
 }
 
@@ -707,6 +713,7 @@ td:last-child {
 .highlight {
   font-weight: 900;
   font-size: 30px;
+  padding-top: 3rem;
 }
 
 .block {

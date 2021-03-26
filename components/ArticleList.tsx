@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import useWatchFont from '../hooks/useWatchFont';
 
-import styles from './ArticleList.module.scss';
+import styles from './Index.module.scss';
 
 const ArticleList = ({
   articles,
