@@ -1,6 +1,5 @@
 import React, { ReactNode, useContext } from 'react';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
-import { fr } from 'date-fns/locale';
 import styles from './Article.module.scss';
 import PreferencesContext from '../contexts/PreferencesContext';
 import classCompactor from '../helpers/classCompator';
