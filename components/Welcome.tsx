@@ -14,7 +14,7 @@ const Welcome = () => (
     <ImgProfilePic />
     <header className={styles.header}>
       <p className={styles.title}>Hi, I'm Juliette</p>
-      <p className={styles.subtitle}>Thanks for stepping by !</p>
+      <p className={styles.subtitle}>Thanks for stopping by !</p>
       <p>
         I'm a back-end Ruby on Rails developer. I'm curious about a lot of
         things in web development. I love knitting and embroidery. Here to share
