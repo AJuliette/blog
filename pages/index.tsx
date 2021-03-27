@@ -9,6 +9,7 @@ import Layout from '../components/Layout';
 import ArticleList from '../components/ArticleList';
 import Welcome from '../components/Welcome';
 import Talking from '../components/Talking';
+import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -127,6 +128,7 @@ export default function Home({
         <Welcome />
         <ArticleList articles={articles} />
         <Talking />
+        <Projects />
         <Contact />
       </Layout>
     </>
