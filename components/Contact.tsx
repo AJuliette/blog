@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaCodepen } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaCodepen, FaTwitter } from 'react-icons/fa';
 import styles from './Contact.module.scss';
 
 const Contact = () => (
@@ -31,6 +31,15 @@ const Contact = () => (
           href="https://codepen.io/AJulietteDev"
         >
           <FaCodepen size="60" />
+        </a>
+      </li>
+      <li className={styles.inline}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/ajuliette_dev"
+        >
+          <FaTwitter size="60" />
         </a>
       </li>
     </ul>
