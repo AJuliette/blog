@@ -38,7 +38,7 @@ const Projects = () => {
           <li className={styles.blockList}>
             <Link href={project.path}>
               <a className={rubikLoadedClass} target="_blank">
-                <Image src={project.src} width="300" height="200" />
+                <Image src={project.src} width="300" height="158" />
                 <p className={styles.title}>{project.title}</p>
                 <p>{project.description}</p>
               </a>
