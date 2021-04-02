@@ -96,14 +96,12 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const description =
-  "Where I post my articles, projects, tutorials for workshops. I'm a back-end Ruby on Rails developer, with a strong interest for front-end.";
+  "Where I post my articles, projects and tutorials for workshops. I'm a back-end Ruby on Rails developer, with a strong interest for front-end.";
 const title = "Juliette Audema's portfolio";
 const twitterHandle = 'ajuliette_dev';
-const siteName = "AJuliette's Blog";
+const siteName = 'AJuliette';
 
-const imagesDirectory = path.join(process.cwd(), 'public');
-const filename = 'profile.jpeg';
-const previewImage = path.join(imagesDirectory, filename);
+const previewImage = '/profile.jpeg';
 
 export default function Home({
   articles,
@@ -131,6 +129,8 @@ export default function Home({
         <meta property="og:image" content={previewImage} key="ogimage" />
         <meta property="og:site_name" content={siteName} key="ogsitename" />
 
+        <meta name="twitter:site" content={siteName} />
+        <meta name="twitter:image:src" content="" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
