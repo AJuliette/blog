@@ -130,7 +130,7 @@ export default function Home({
         <meta property="og:site_name" content={siteName} key="ogsitename" />
 
         <meta name="twitter:site" content={siteName} />
-        <meta name="twitter:image:src" content="" />
+        <meta name="twitter:image:src" content={previewImage} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
