@@ -95,8 +95,15 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const description = 'Blog de Juliette Audema';
-const title = 'AJuliette';
+const description =
+  "Where I post my articles, projects, tutorials for workshops. I'm a back-end Ruby on Rails developer, with a strong interest for front-end.";
+const title = "Juliette Audema's portfolio";
+const twitterHandle = 'ajuliette_dev';
+const siteName = "AJuliette's Blog";
+
+const imagesDirectory = path.join(process.cwd(), 'public');
+const filename = 'profile.jpeg';
+const previewImage = path.join(imagesDirectory, filename);
 
 export default function Home({
   articles,
@@ -121,8 +128,12 @@ export default function Home({
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={previewImage} key="ogimage" />
+        <meta property="og:site_name" content={siteName} key="ogsitename" />
+
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
       </Head>
       <Layout>
         <Welcome />
