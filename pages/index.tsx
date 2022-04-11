@@ -5,6 +5,7 @@ import { GetStaticProps } from 'next';
 import matter from 'gray-matter';
 import { sortBy } from 'lodash';
 import { format } from 'date-fns';
+import Script from 'next/script';
 import Layout from '../components/Layout';
 import ArticleList from '../components/ArticleList';
 import Welcome from '../components/Welcome';
@@ -135,6 +136,12 @@ export default function Home({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
       </Head>
+      <Script
+        src="//dfcd.co/doom-scroller-1.0.min.js"
+        integrity="sha384-ggTTtGPMZaxjrSseHEq7lVpu3iAvouUs3poW0WkSQkPfj7jTlwKn/kkQNCUv9SRf"
+        crossOrigin="anonymous"
+        strategy="lazyOnload"
+      />
       <Layout>
         <Welcome />
         <ArticleList articles={articles} />
